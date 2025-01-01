@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio Pessoal</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="habilidades.html">Habilidades</a></li>
+                <li><a href="projetos.html">Projetos</a></li>
+               
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Seção sobre -->
+    <section id="sobre">
+        <h1>Olá, sou Luis Montroni</h1>
+        <p>Bem-vindo ao meu portfólio! Aqui você encontrará informações sobre mim e meus projetos.</p>
+        
+        <!-- Foto -->
+        <div class="foto-container">
+            <img src="foto_perfil.jpg" alt="Luis Montroni" class="foto-perfil">
+        </div>
+    
+        <!-- Links de redes sociais -->
+        <div class="social-links">
+            <a href="https://github.com/luisjdon" target="_blank" class="social-link github">GitHub</a>
+            <a href="https://www.linkedin.com/in/luis-alves-98596516a/" target="_blank" class="social-link linkedin">LinkedIn</a>
+        </div>
+    </section>
+
+    <!-- Seção de habilidades -->
+   
+
+    <section id="projetos">
+        <div class="container">
+            <h1>Meus Projetos</h1>
+            <p>Aqui estão alguns dos projetos que desenvolvi para praticar minhas habilidades de programação. Cada um desses projetos foi feito com HTML5, CSS3 e JavaScript. Explore e veja como são funcionais!</p>
+    
+            <!-- Conversor de Unidades -->
+            <div class="projeto">
+                <h2>Conversor de Unidades</h2>
+                <p>Este projeto converte diferentes unidades, como temperatura, comprimento, e massa. Uma maneira simples de aplicar lógica em JavaScript.</p>
+                <button onclick="openProject('conversor')">Abrir Projeto</button>
+            </div>
+    
+            <!-- Calculadora -->
+            <div class="projeto">
+                <h2>Calculadora</h2>
+                <p>Uma calculadora básica feita com HTML, CSS e JavaScript. Permite somar, subtrair, multiplicar e dividir.</p>
+                <button onclick="openProject('calculadora')">Abrir Projeto</button>
+            </div>
+    
+            <!-- Jogo em HTML5/CSS3/JavaScript -->
+            <div class="projeto">
+                <h2>Jogo em HTML5/CSS3/JavaScript</h2>
+                <p>Um jogo simples feito com HTML5, CSS3 e JavaScript. Uma ótima maneira de aprender sobre interatividade e lógica de jogos.</p>
+                <button onclick="openProject('jogo')">Abrir Projeto</button>
+            </div>
+    
+            <!-- Desenhando com HTML5 Canvas -->
+            <div class="projeto">
+                <h2>Desenhando com HTML5 Canvas</h2>
+                <p>Uma aplicação para desenhar no navegador usando a tag Canvas do HTML5. Permite interações de desenho com o mouse.</p>
+                <button onclick="openProject('canvas')">Abrir Projeto</button>
+            </div>
+    
+            <!-- Cronômetro ou Temporizador -->
+            <div class="projeto">
+                <h2>Cronômetro / Temporizador</h2>
+                <p>Um cronômetro simples com funcionalidades de contagem regressiva e cronômetro para medir o tempo em segundos.</p>
+                <button onclick="openProject('cronometro')">Abrir Projeto</button>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Modal para abrir os projetos -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">×</span>
+            <div id="project-content">
+                <!-- Conteúdo do projeto será carregado aqui -->
+            </div>
+        </div>
+    </div>
+    
+
+
+
+
+    <footer>
+        <p>© 2024 Luis Montroni. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

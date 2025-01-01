@@ -1,0 +1,341 @@
+/* Resetando alguns estilos padrões */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Seção sobre */
+#sobre {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+}
+
+#sobre h1 {
+    color: #333;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+#sobre p {
+    color: #555;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+/* Estilo para a foto */
+.foto-container {
+    margin: 20px 0;
+}
+
+.foto-perfil {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border: 5px solid #4CAF50;
+    transition: transform 0.3s ease;
+}
+
+.foto-perfil:hover {
+    transform: scale(1.1);
+}
+
+/* Estilo dos links sociais */
+.social-links {
+    margin-top: 20px;
+}
+
+.social-link {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    border-radius: 25px;
+    transition: background-color 0.3s ease;
+}
+
+.social-link.github {
+    background-color: #333;
+}
+
+.social-link.github:hover {
+    background-color: #2b2b2b;
+}
+
+.social-link.linkedin {
+    background-color: #0077b5;
+}
+
+.social-link.linkedin:hover {
+    background-color: #005a8a;
+}
+
+
+
+
+
+
+/* Estilos gerais */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Estilos das seções */
+section {
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Sobre */
+#sobre {
+    text-align: center;
+}
+
+#sobre h1 {
+    color: #333;
+}
+
+#sobre p {
+    color: #555;
+}
+
+/* Habilidades */
+#habilidades ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#habilidades ul li {
+    margin: 10px;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+}
+
+/* Projetos */
+.galeria {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.projeto {
+    margin: 10px;
+    text-align: center;
+}
+
+.projeto img {
+    width: 100%;
+    height: auto;
+    max-width: 300px;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.projeto img:hover {
+    transform: scale(1.05);
+}
+
+/* Formulário de contato */
+#contato form {
+    display: grid;
+    gap: 10px;
+}
+
+#contato label {
+    font-weight: bold;
+}
+
+#contato input, #contato textarea {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 100%;
+}
+
+#contato button {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#contato button:hover {
+    background-color: #444;
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+}
+
+/* Estilo geral da seção Sobre */
+#sobre {
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#sobre h1 {
+    font-size: 2.5rem;
+    color: #4CAF50;
+    margin-bottom: 20px;
+}
+
+#sobre h2 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-top: 30px;
+}
+
+#sobre p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+#sobre ul {
+    list-style: none;
+    margin-top: 20px;
+    padding-left: 0;
+}
+
+#sobre ul li {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+#sobre ul li::before {
+    content: "✓";
+    color: #4CAF50;
+    margin-right: 10px;
+}
+
+/* Estilo geral da seção Habilidades */
+#habilidades {
+    padding: 40px 20px;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#habilidades h1 {
+    font-size: 2.5rem;
+    color: #4CAF50;
+    margin-bottom: 20px;
+}
+
+#habilidades h2 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-top: 30px;
+}
+
+#habilidades p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* Estilo das habilidades individuais */
+.habilidade {
+    margin-bottom: 30px;
+}
+
+.habilidade h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.barra-progresso {
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    width: 100%;
+    height: 10px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+.barra-progresso .progresso {
+    height: 100%;
+    border-radius: 10px;
+    transition: width 0.5s ease;
+}
+
+/* Progresso de cada habilidade */
+.progresso.c {
+    background-color: #FF6347; /* Tom de vermelho para C */
+    width: 40%; /* 40% de conhecimento */
+}
+
+.progresso.html {
+    background-color: #4CAF50; /* Tom de verde para HTML e CSS */
+    width: 80%; /* 80% de conhecimento */
+}
+
+.progresso.js {
+    background-color: #FFD700; /* Tom de dourado para JavaScript */
+    width: 30%; /* 30% de conhecimento */
+}
+
+/* Estilo das outras habilidades */
+.habilidade p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 10px;
+}

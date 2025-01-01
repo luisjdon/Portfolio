@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Calculadora</h1>
+    <div id="calculadora">
+        <input type="text" id="resultado" disabled>
+        <div id="botoes">
+            <button class="botao" onclick="adicionar('1')">1</button>
+            <button class="botao" onclick="adicionar('2')">2</button>
+            <button class="botao" onclick="adicionar('3')">3</button>
+            <button class="botao" onclick="adicionar('+')">+</button>
+
+            <button class="botao" onclick="adicionar('4')">4</button>
+            <button class="botao" onclick="adicionar('5')">5</button>
+            <button class="botao" onclick="adicionar('6')">6</button>
+            <button class="botao" onclick="adicionar('-')">-</button>
+
+            <button class="botao" onclick="adicionar('7')">7</button>
+            <button class="botao" onclick="adicionar('8')">8</button>
+            <button class="botao" onclick="adicionar('9')">9</button>
+            <button class="botao" onclick="adicionar('*')">*</button>
+
+            <button class="botao" onclick="adicionar('0')">0</button>
+            <button class="botao" onclick="limpar()">C</button>
+            <button class="botao" onclick="calcular()">=</button>
+            <button class="botao" onclick="adicionar('/')">/</button>
+        </div>
+    </div>
+
+    <script>
+        let expressao = '';
+
+        function adicionar(valor) {
+            expressao += valor;
+            document.getElementById('resultado').value = expressao;
+        }
+
+        function limpar() {
+            expressao = '';
+            document.getElementById('resultado').value = '';
+        }
+
+        function calcular() {
+            try {
+                expressao = eval(expressao).toString();
+                document.getElementById('resultado').value = expressao;
+            } catch (e) {
+                document.getElementById('resultado').value = 'Erro';
+            }
+        }
+    </script>
+</body>
+</html>

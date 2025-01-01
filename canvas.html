@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desenhando com Canvas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Desenhando no Canvas</h1>
+    <canvas id="meuCanvas" width="500" height="500"></canvas>
+
+    <script>
+        let canvas = document.getElementById('meuCanvas');
+        let ctx = canvas.getContext('2d');
+        
+        let desenhando = false;
+
+        canvas.addEventListener('mousedown', function(event) {
+            desenhando = true;
+            ctx.beginPath();
+            ctx.moveTo(event.offsetX, event.offsetY);
+        });
+
+        canvas.addEventListener('mousemove', function(event) {
+            if (desenhando) {
+                ctx.lineTo(event.offsetX, event.offsetY);
+                ctx.stroke();
+            }
+        });
+
+        canvas.addEventListener('mouseup', function() {
+            desenhando = false;
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Unidades</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Conversor de Unidades</h1>
+    <form id="formConversor">
+        <label for="valor">Valor:</label>
+        <input type="number" id="valor" required>
+        
+        <label for="unidade">Converter para:</label>
+        <select id="unidade">
+            <option value="cm">Centímetros</option>
+            <option value="m">Metros</option>
+            <option value="km">Kilômetros</option>
+        </select>
+
+        <button type="submit">Converter</button>
+    </form>
+
+    <p id="resultado"></p>
+
+    <script>
+        document.getElementById('formConversor').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            let valor = parseFloat(document.getElementById('valor').value);
+            let unidade = document.getElementById('unidade').value;
+            let resultado = '';
+
+            if (unidade === 'cm') {
+                resultado = valor * 100;
+            } else if (unidade === 'm') {
+                resultado = valor;
+            } else if (unidade === 'km') {
+                resultado = valor / 1000;
+            }
+
+            document.getElementById('resultado').textContent = `Resultado: ${resultado} ${unidade}`;
+        });
+    </script>
+</body>
+</html>
